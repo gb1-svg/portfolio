@@ -21,6 +21,64 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
+---
+
+## Cara Instalasi
+
+Ikuti langkah-langkah di bawah ini untuk menginstal dan menjalankan aplikasi ini di komputer lokal Anda.
+
+### Prasyarat
+Pastikan Anda sudah menginstal **Composer** (untuk dependensi PHP) dan **Node.js** (untuk dependensi JavaScript) di sistem Anda.
+
+### Langkah-langkah
+1.  **Clone Repositori (jika belum)**
+    Jika Anda belum memiliki kode proyek, clone dari GitHub:
+    ```bash
+    git clone [https://github.com/gb1-svg/portfolio.git](https://github.com/gb1-svg/portfolio.git)
+    cd portfolio
+    ```
+
+2.  **Instal Dependensi PHP**
+    Jalankan perintah berikut untuk menginstal semua paket Composer yang diperlukan:
+    ```bash
+    composer install
+    ```
+
+3.  **Siapkan File Environment**
+    Duplikat file konfigurasi `.env.example` dan beri nama `.env`.
+    ```bash
+    cp .env.example .env
+    ```
+    Buka file `.env` yang baru dibuat dan atur koneksi database Anda (contohnya `DB_DATABASE`, `DB_USERNAME`, `DB_PASSWORD`).
+
+4.  **Buat Kunci Aplikasi**
+    Perintah ini akan menghasilkan kunci aplikasi yang unik dan aman untuk proyek Anda:
+    ```bash
+    php artisan key:generate
+    ```
+
+5.  **Jalankan Migrasi Database**
+    Perintah ini akan membuat tabel-tabel database yang diperlukan.
+    ```bash
+    php artisan migrate
+    ```
+
+6.  **Instal dan Kompilasi Aset Frontend**
+    Instal dependensi JavaScript, lalu kompilasi aset frontend (seperti CSS dan JavaScript).
+    ```bash
+    npm install
+    npm run dev
+    ```
+
+7.  **Jalankan Server Lokal**
+    Sekarang Anda bisa menjalankan server pengembangan Laravel.
+    ```bash
+    php artisan serve
+    ```
+    Setelah server berjalan, Anda dapat mengakses aplikasi di browser Anda, biasanya di `http://127.0.0.1:8000`.
+
+---
+
 ## Learning Laravel
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
